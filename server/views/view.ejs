@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+</head>
+<bod>
+    <div class="topnav" id=myNavbar>
+        <li>
+            <a href='/'>Home</a>
+        </li>
+        <li>
+            <a href='/pizza'>Pizza</a>
+        </li>
+    </div>
+    <h1>Pizza:
+        <%=data.Nombre%>
+    </h1>
+    <table class="table" style="width:100%">
+        <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Ingredientes</th>
+            <th>Masa</th>
+            <th>Trozos</th>
+            <th>Con extra queso</th>
+
+        </tr>
+        <td>
+            <%= data.Nombre %>
+        </td>
+        <td>
+            <%= data.Descripcion %>
+        </td>
+        <td>
+            <%= data.Ingredientes %>
+        </td>
+        <td>
+            <%= data.Masa %>
+        </td>
+        <td>
+            <%= data.Trozos %>
+        </td>
+        <td>
+            <%= data.ExtraQueso %>
+        </td>
+        <td>
+            <a href="/pizza/<%=data.Nombre%>">Editar</a>
+        </td>
+        <td>
+            <a href="/deletePizza/<%=data.Nombre%>?_method=DELETE">Eliminar</a>
+        </td>
+    </table>
+
+
+</bod>
+
+
+
+
+
+
+</html>

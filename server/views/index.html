@@ -1,0 +1,35 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+	 crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+	 crossorigin="anonymous"></script>
+</head>
+
+<body class=container>
+	<div class="topnav" id=myNavbar>
+		<li>
+			<a href='/'>Home</a>
+
+		</li>
+		<li>
+			<a href='/pizza'>Pizza</a>
+		</li>
+	</div>
+	<h1>Laboratorio 3(Serie I y II)</h1>
+	<h2>APIs</h2>
+
+	<form class="container">
+		Palabra Secreta:
+		<br>
+		<input type="text" name="PalabraSecreta">
+		<input type="submit" value="Limpiar" formaction="/post-data" formmethod="post">
+		<input type="submit" value="Obtener Encriptado" formaction="/get-ciphered" formmethod="get">
+		<div name="response">
+		</div>
+	</form>
+</body>
+
+</html>

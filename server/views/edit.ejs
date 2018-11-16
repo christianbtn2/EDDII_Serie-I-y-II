@@ -1,0 +1,103 @@
+<html>
+    
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+            crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+            crossorigin="anonymous"></script>
+    </head>
+    
+    <body>
+        <div class="topnav" id=myNavbar>
+            <li>
+                <a href='/'>Home</a>
+            </li>
+            <li>
+                <a href='/pizza'>Pizza</a>
+            </li>
+        </div>
+        <form class="container" method="post" action="/Update/<%=key%>">
+            <legend class="col-md-8">Editar pizza: <%=key %></legend>
+    
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="key">Nombre</label>
+                <div class="col-md-8">
+                    <input id="nombre" name="nombre" type="text" value= <%=data.Nombre %>  class="form-control input-md" autocomplete=off
+                        required="">
+                    <span class="help-block">Ingrese el nombre de la pizza</span>
+                </div>
+    
+            </div>
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="key">Descripción</label>
+                <div class="col-md-8">
+                    <input id="desc" name="desc" type="text"  value=<%=data.Descripcion %>  class="form-control input-md" autocomplete=off required="">
+                    <span class="help-block">Ingrese una breve descripción</span>
+                </div>
+    
+            </div>
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="key">Seleccione los ingresientes</label>
+                <div class="col-md-8">
+
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id=Cebolla name="section[]" value="Cebolla" />Cebolla</label>
+    
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id=Jamón name="section[]" value="Jamon" />Jamón</label>
+    
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id=Pepperoni name="section[]" value="Pepperoni" />Pepperoni</label>
+    
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id=Champiñones name="section[]" value="Champiñones" />Champiñones</label>
+    
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id=Aceitunas name="section[]" value="Aceitunas" />Aceitunas</label>
+                        
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="key">Tipo de masa</label>
+                <div class="col-md-8">
+                    <select name=tipoMasa>
+                        <option value="delgada">delgada</option>
+                        <option value="gruesa">gruesa</option>
+                        <option value="rellena">rellena</option>
+                        <option value="psicodelica">psicodelica</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="key">Número de trozos</label>
+                <div class="col-md-8">
+                    <input id="trozos" type="number" name="trozos" step="1" min="4" max="12" required list="defaultNumbers">
+                    <span class="validity"></span>
+                    <datalist id="defaultNumbers">
+                        <option value="4">
+                            <option value="6">
+                                <option value="8">
+                                    <option value="10">
+                                        <option value="12">
+                    </datalist>
+                </div>
+    
+            </div>
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="key">Extra queso</label>
+                <div class="col-md-8">
+                    <label class="checkbox-inline">
+                        <input type="checkbox" name="conQ" value="1" />Extra queso</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-8">
+                    <input type="submit" value="Editar pizza">
+                </div>
+            </div>
+    
+        </form>
+    </body>
+    
+    </html>
